@@ -1,0 +1,12 @@
+[package]
+name = "spark_sdk_example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+spark_sdk = "0.0.1"
+src20_sdk = "0.0.2"
+fuels = { version = "0.43.0", features = ["fuel-core-lib"] }
+tokio = { version = "1.12", features = ["rt", "macros"] }
