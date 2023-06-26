@@ -1,12 +1,19 @@
 [package]
 name = "spark_sdk_example"
-version = "0.1.0"
+description = "Rust sdk example of the Spark"
+version = "0.0.1"
 edition = "2021"
+authors = ["alexey <alexnagornnyy.an@gmail.com>"]
+license = "Apache-2.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[test]]
+harness = true
+name = "tests"
+path = "tests/harness.rs"
 
 [dependencies]
-spark_sdk = "0.0.1"
-src20_sdk = "0.0.2"
-fuels = { version = "0.43.0", features = ["fuel-core-lib"] }
+spark_sdk = { git = "https://github.com/compolabs/spark-rs.git", branch = "hotfix/v0.41.0-predicate-configurables" }
+src20_sdk = { git = "https://github.com/compolabs/src-20.git", branch = "hotfix/v0.41.0-predicate-configurables" }
+fuels = { git = "https://github.com/FuelLabs/fuels-rs.git", branch = "hotfix/v0.41.0-predicate-configurables" }
 tokio = { version = "1.12", features = ["rt", "macros"] }
+dotenv = "0.15.0"
