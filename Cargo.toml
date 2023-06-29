@@ -12,8 +12,8 @@ name = "tests"
 path = "tests/harness.rs"
 
 [dependencies]
-spark_sdk = { git = "https://github.com/compolabs/spark-rs.git", branch = "hotfix/v0.41.0-predicate-configurables" }
-src20_sdk = { git = "https://github.com/compolabs/src-20.git", branch = "hotfix/v0.41.0-predicate-configurables" }
-fuels = { git = "https://github.com/FuelLabs/fuels-rs.git", branch = "hotfix/v0.41.0-predicate-configurables" }
+spark_sdk = "0.0.2"
+src20_sdk = "0.0.3"
+fuels = { version = "0.41.1", features = ["fuel-core-lib"] }
 tokio = { version = "1.12", features = ["rt", "macros"] }
 dotenv = "0.15.0"
